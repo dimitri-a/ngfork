@@ -19,7 +19,7 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/contact', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
