@@ -10,6 +10,12 @@ module.exports = function(config) {
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
+    preprocessors : {
+      'app/**/*.js': ['coverage']
+    },
+
+    reporters: ['progress', 'coverage'],
+
     // base path, that will be used to resolve files and exclude
     basePath: '../',
 
@@ -52,7 +58,8 @@ module.exports = function(config) {
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-coverage'
     ],
 
     // Continuous Integration mode
