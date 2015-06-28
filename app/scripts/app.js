@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var app=angular
   .module('app', [
     'ngAnimate',
     'ngCookies',
@@ -16,8 +16,9 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+
+  app.config(function ($routeProvider) {
     $routeProvider
       .when('/contact', {
         templateUrl: 'views/main.html',
@@ -30,6 +31,12 @@ angular
       .when('/', {
         templateUrl: 'views/richlist.html',
         controller: 'RichListCtrl'
+      })
+      .when('/validation', {
+        templateUrl: 'views/customvalidation.html'
+      })
+      .when('/gutter', {
+        templateUrl: 'views/gutter.html'
       })
       .otherwise({
         redirectTo: '/'
