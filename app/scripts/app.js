@@ -15,7 +15,8 @@ var app=angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap'
   ]);
 
   app.config(function ($routeProvider) {
@@ -37,6 +38,9 @@ var app=angular
       })
       .when('/gutter', {
         templateUrl: 'views/gutter.html'
+      })
+      .when('/modal', {
+        templateUrl: 'views/modal_filter_for_grid.html'
       })
       .otherwise({
         redirectTo: '/'
