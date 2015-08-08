@@ -8,14 +8,8 @@
  *
  * Main module of the application.
  */
-var app=angular
-  .module('app', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
+var app=angular.module('app', [
     'ngRoute',
-    'ngSanitize',
-    'ngTouch',
     'ui.bootstrap'
   ]);
 
